@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'en'}},
+    {params: {lang: 'it'}},
+    {params: {lang: 'jp'}},
+  ];
+}
+
+const { lang } = Astro.params;
+
+const content = {
+  en: {
+    title: "Martina Baradel | Sociologist & Criminologist",
+    subtitle: "PhD in Sociology and Criminology",
+    bio: "Educated in the UK, specializing in Yakuza culture and marginalized women.",
+    welcome: "Welcome to my academic portfolio and writing space."
+  },
+  it: {
+    title: "Martina Baradel | Sociologa e Criminologa",
+    subtitle: "Dottorato in Sociologia e Criminologia",
+    bio: "Studi nel Regno Unito, specializzata in cultura Yakuza e donne emarginate.",
+    welcome: "Benvenuti nel mio portfolio accademico e spazio di scrittura."
+  },
+  jp: {
+    title: "マルティナ・バラデル | 社会学者・犯罪学者",
+    subtitle: "社会学・犯罪学博士",
+    bio: "英国で学び、ヤクザ文化や日陰に生きる女性を研究。",
+    welcome: "私の学術ポートフォリオと執筆スペースへようこそ。"
+  }
+};
+
+const currentContent = content[lang as keyof typeof content];
+---
+
+<Layout title={currentContent.title} lang={lang || 'en'}>
+  <div class="hero container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="text-accent">{currentContent.welcome}</h1>
+        <h2>{currentContent.subtitle}</h2>
+        <p>{currentContent.bio}</p>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-placeholder">
+          <img src="/images/profile/profile.jpg" alt="Martina Baradel" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="fallback-placeholder">Profile Photo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 60vh;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-photo {
+    flex: 1;
+    max-width: 350px; /* Increased by ~10% */
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: var(--color-header-bg);
+    border: 2px solid var(--color-accent);
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .fallback-placeholder {
+    display: none;
+    color: var(--color-accent);
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-content {
+      flex-direction: column-reverse;
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .hero-photo {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>

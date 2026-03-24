@@ -1,0 +1,82 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+  /* Colors */
+  --color-header-bg: #1a1814;
+  --color-accent: #b8942a;
+  --color-bg: #fdfbf7;
+  --color-text: #222222;
+  --color-text-muted: #666666;
+  --color-border: #e8e6e1;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Reset and Globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll; /* 페이지 길이에 따른 스크롤바 유무로 인한 레이아웃 시프팅(위치 흔들림) 방지 */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Utilities */
+main {
+  flex: 1;
+  padding: 4rem 0;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  main {
+    padding: 2rem 0;
+  }
+}

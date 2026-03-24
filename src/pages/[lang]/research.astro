@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'en'}},
+    {params: {lang: 'it'}},
+    {params: {lang: 'jp'}},
+  ];
+}
+
+const { lang } = Astro.params;
+
+const content = {
+  en: {
+    title: "Research | Martina Baradel",
+    heading: "Research & Projects",
+    projects: [
+      {
+        title: "Women in the Shadows (Current)",
+        desc: "An ongoing active project interviewing marginalized women involved in or affected by underground society."
+      },
+      {
+        title: "Yakuza Culture Studies",
+        desc: "Extensive research on the societal impacts and internal structures of the Yakuza."
+      }
+    ]
+  },
+  it: {
+    title: "Ricerca | Martina Baradel",
+    heading: "Ricerca e Progetti",
+    projects: [
+      {
+        title: "Donne nell'Ombra (Attuale)",
+        desc: "Progetto in corso che intervista donne emarginate coinvolte o colpite dalla criminalità organizzata."
+      },
+      {
+        title: "Studi sulla Cultura Yakuza",
+        desc: "Ricerca approfondita sugli impatti sociali e sulle strutture interne della Yakuza."
+      }
+    ]
+  },
+  jp: {
+    title: "研究 | マルティナ・バラデル",
+    heading: "研究とプロジェクト",
+    projects: [
+      {
+        title: "日陰の女性たち (進行中)",
+        desc: "地下社会に関わる、または影響を受けている疎外された女性へのインタビューを行う進行中のプロジェクト。"
+      },
+      {
+        title: "ヤクザ文化研究",
+        desc: "ヤクザの社会的影響と内部構造に関する広範な研究。"
+      }
+    ]
+  }
+};
+
+const cur = content[lang as keyof typeof content];
+---
+
+<Layout title={cur.title} lang={lang || 'en'}>
+  <div class="container page-content">
+    <h1 class="page-title">{cur.heading}</h1>
+    
+    <div class="project-list">
+      {cur.projects.map(proj => (
+        <div class="project-item">
+          <h3 class="text-accent">{proj.title}</h3>
+          <p>{proj.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page-content {
+    margin-top: -2rem; /* 전체 공통 4rem 최상단 여백을 2rem(절반)으로 상쇄 */
+    padding-bottom: 5rem;
+    padding-left: 3rem; /* 1.5배(2rem -> 3rem) 늘림 */
+  }
+
+  .page-title {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .project-item {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .project-item:last-child {
+    border-bottom: none;
+  }
+</style>
