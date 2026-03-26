@@ -13,178 +13,498 @@ const { lang } = Astro.params;
 
 const content = {
   en: {
-    title: "Publications | Martina Baradel",
+    title: "Publications & Media | Martina Baradel",
     headingBooks: "Books",
     headingPapers: "Academic Papers",
-    headingArticles: "Articles & Press",
+    headingArticles: "Articles",
+    headingNews: "Media & News",
+    labelTranslations: "Available in:",
     books: [
       {
-        title: "Yakuza and the City",
-        desc: "An exploration of Yakuza culture and urban environments.",
-        year: "2023",
-        image: "/images/bookcovers/cover-yakuza-blues.jpg"
+        title: "21st Century Yakuza: Death of Japanese Organised Crime",
+        desc: "Once dominant and institutionalised, the Yakuza, one of Japan’s best known criminal organisations, is now shrinking under the combined pressure of legal exclusion, social stigmatisation, and market regulation. Their membership has dropped from more than 80,000 in 2009 to fewer than 20,000 in 2025. Yet their disappearance is far from complete. Based on extensive fieldwork with active and former members, police officers, lawyers, and journalists, Martina Baradel examines how these organisations adapt to repression and explores what happens when a mafia begins to die. 21st Century Yakuza illuminates how Japan’s model of regulatory saturation has dismantled the Yakuza’s organisational capacity but left behind a governance vacuum in markets the state struggles to control. This book demonstrates how the Yakuza persist through symbolic and residual forms of authority even as their formal power erodes, and how their decline has fragmented the criminal underworld. It traces the transformation of the Yakuza from territorially embedded brokers of governance to marginal actors in a more decentralised criminal landscape, including the delegation of trading activities to non-affiliated networks. Through a sharp lens on criminal decline and adaptation, 21st Century Yakuza offers a compelling portrait of a fading underworld and the new forms of disorder emerging in its wake. It is an essential read for anyone interested in the shifting boundaries of law, authority, and illicit power in contemporary Japan.",
+        year: "2026",
+        image: "/images/bookcovers/21st-yakuza.png",
+        translations: ["EN"],
       },
       {
-        title: "Women in the Shadows",
-        desc: "Interviews and sociological insights into marginalized women.",
-        year: "Upcoming",
-      },
-      {
-        title: "Crime in Modern Japan",
-        desc: "A comprehensive look at structural crime changes.",
-        year: "2021",
+        title: "Yakuza Blues",
+        desc: "Japan is one of the safest countries in the world and, at the same time, the birthplace of a powerful, centuries-old, and far-reaching mafia. The life of the yakuza, the Japanese mafia, is deeply intertwined with that of Japan itself — the yakuza looks after citizens forgotten by the state, engages with politics, participates in economic life, and regulates the criminal underworld. For several years, Martina Baradel has made the yakuza the subject of her study and passionate research. Her work, grounded in the testimonies of those who live on the shadow side of Japan's meticulously ordered society, has earned her the trust of police officers and members of the organisation alike, as well as the very few Japanese journalists who cover the yakuza and who have little patience for the dominant narrative surrounding it. It is through a network of trusted contacts that she manages to secure the meeting from which this investigation takes its departure: a meeting with the boss of one of the largest yakuza families, Tanaka Jun'ichiro, a fictional name under which Martina Baradel gathers the voices and lives of very real people. Meeting after meeting, Tanaka will recount to Martina his life of triumphs and downfalls, and in doing so will allow her to reconstruct the history of the yakuza over the past seventy years, which is, at the same time, the history of Japan over the past seventy years.",
+        year: "2025",
+        image: "/images/bookcovers/cover-yakuza-blues.jpg",
+        translations: ["IT"],
       },
     ],
     papers: [
       {
-        title: "The Economic Impact of the Yakuza",
-        journal: "Journal of Asian Sociology",
-        year: "2022",
-        link: "#",
+        title:
+          "Investigating the dynamics of yakuza violence using multilevel network analysis",
+        journal: "ScienceDirect",
+        year: "2025",
+        link: "https://www.sciencedirect.com/science/article/pii/S0378873325000103",
       },
       {
-        title: "Female Roles in Underground Economies",
-        journal: "Criminology Review",
+        title:
+          "Mapping drug smuggling networks in Japan: a social network analysis of trial documents",
+        journal: "Taylor & Francis",
+        year: "2024",
+        link: "https://www.tandfonline.com/doi/pdf/10.1080/17440572.2024.2375241",
+      },
+      {
+        title:
+          "Under a setting sun: the spatial displacement of the yakuza and their longing for visibility",
+        journal: "Springer",
         year: "2021",
-        link: "#",
+        link: "https://link.springer.com/article/10.1007/s12117-020-09398-4",
       },
       {
-        title: "Urbanization and Crime Rates in Tokyo",
-        journal: "Urban Studies Quarterly",
-        year: "2019",
-        link: "#",
+        title:
+          "Yakuza Grey: The Shrinking of the Il/legal Nexus and its Repercussions on Japanese Organised Crime",
+        journal: "Taylor & Francis",
+        year: "2020",
+        link: "https://www.tandfonline.com/doi/abs/10.1080/17440572.2020.1813114",
+      },
+      {
+        title:
+          "The rise of shaming paternalism in Japan: recent tendencies in the Japanese criminal justice system",
+        journal: "Springer",
+        year: "2021",
+        link: "https://link.springer.com/article/10.1007/s12117-019-09357-8",
+      },
+      {
+        title:
+          "The Yakuza on Trial: Sentencing Patterns of Members of Japanese Organized Crime",
+        journal: "ZJapanR",
+        year: "2020",
+        link: "https://www.zjapanr.de/index.php/zjapanr/article/view/1538/1580",
+      },
+      {
+        title:
+          "Discrimination, Othering, and the Political Instrumentalizing of Pandemic Disease. Two Case Studies",
+        journal: "Openedition",
+        year: "2020",
+        link: "https://journals.openedition.org/jihi/1479",
       },
     ],
     articles: [
       {
-        title: "Interview: Uncovering the Yakuza",
-        source: "The Japan Times",
-        year: "2023",
+        title:
+          "How the real murders behind the hit novel Butter exposed Japanese media misogyny",
+        source: "The Conversation",
+        year: "31/01/2025",
+        link: "https://theconversation.com/how-the-real-murders-behind-the-hit-novel-butter-exposed-japanese-media-misogyny-247859",
       },
       {
-        title: "Opinion: The Hidden Cost of Marginalization",
-        source: "The Guardian",
-        year: "2022",
+        title:
+          "‘I never lost a fight against a man’: the story of the only woman to join Japan’s notorious yakuza",
+        source: "The Conversation",
+        year: "16/01/2024",
+        link: "https://theconversation.com/i-never-lost-a-fight-against-a-man-the-story-of-the-only-woman-to-join-japans-notorious-yakuza-220792",
       },
       {
-        title: "Feature: Women of the Shadows",
-        source: "BBC News",
-        year: "2024",
+        title:
+          "Yakuza battle Chinese gangs for control of Japan’s criminal underworld",
+        source: "The Conversation",
+        year: "30/01/2023",
+        link: "https://theconversation.com/yakuza-battle-chinese-gangs-for-control-of-japans-criminal-underworld-197718",
+      },
+      {
+        title: "Crime in Japan is back to normal",
+        source: "East Asia Forum",
+        year: "08/03/2023",
+        link: "https://eastasiaforum.org/2023/03/08/crime-in-japan-is-back-to-normal/",
+      },
+    ],
+    news: [
+      {
+        title: "Yakuza Blues - Intervista a Martina Baradel",
+        source: "Orizzonti Internazionali",
+        year: "04/11/2025",
+        link: "https://www.orizzontinternazionali.org/2025/11/04/yakuza-blues-intervista-a-martina-baradel/",
+      },
+      {
+        title: "Cos'è davvero la yakuza",
+        source: "Japanica",
+        year: "11/05/2025",
+        link: "https://japanica.substack.com/p/cosa-davvero-la-yakuza-martina-baradel",
+      },
+      {
+        title: "I segreti della YAKUZA",
+        source: "Cose Molto Umane podcast",
+        year: "05/04/2025",
+        link: "https://www.youtube.com/watch?v=O8J_a83ptEE",
+      },
+      {
+        title:
+          "Inside the underbelly of East Asia: Japan’s ex-yakuza search for redemption",
+        source: "CNA",
+        year: "03/05/2024",
+        link: "https://www.youtube.com/watch?v=cZ-iKFsWzfw",
+      },
+      {
+        title:
+          "Yakuza: cuál es el origen de la temida mafia japonesa y cómo se ha transformado",
+        source: "BBC Mundo",
+        year: "28/04/2024",
+        link: "https://www.bbc.com/mundo/articles/cw59p11n1ywo",
+      },
+      {
+        title:
+          "'Desde pequena gostava de violência': a história de Nishimura Mako, única mulher a conseguir entrar para a Yakuza",
+        source: "BBC News Brasil",
+        year: "09/04/2024",
+        link: "https://www.bbc.com/portuguese/articles/cv2yj2dmwxyo",
+      },
+      {
+        title:
+          "Why Japan’s yakuza crime groups are on the verge of disappearing",
+        source: "About Asia",
+        year: "15/04/2024",
+        link: "https://www.scmp.com/podcasts/about-asia",
+      },
+      {
+        title:
+          "Feds charge suspected yakuza leader with selling nuclear weapon materials to Iran",
+        source: "Washington Post",
+        year: "22/02/2024",
+        link: "https://www.washingtontimes.com/news/2024/feb/22/feds-charge-suspected-yakuza-gang-leader-with-sell/",
+      },
+      {
+        title: "Yakuza",
+        source: "Altri Orienti",
+        year: "29/09/2023",
+        link: "https://www.youtube.com/watch?v=qJYXajejcaw",
       },
     ],
   },
   it: {
-    title: "Pubblicazioni | Martina Baradel",
+    title: "Pubblicazioni e Media | Martina Baradel",
     headingBooks: "Libri",
     headingPapers: "Pubblicazioni Accademiche",
-    headingArticles: "Articoli e Stampa",
+    headingArticles: "Articoli",
+    headingNews: "Media e Notizie",
+    labelTranslations: "Disponibile in:",
     books: [
       {
-        title: "Yakuza e la Città",
-        desc: "Un'esplorazione della cultura Yakuza e degli ambienti urbani.",
-        year: "2023",
-        image: "/images/bookcovers/cover-yakuza-blues.jpg"
+        title: "21st Century Yakuza: Death of Japanese Organised Crime",
+        desc: "Once dominant and institutionalised, the Yakuza, one of Japan’s best known criminal organisations, is now shrinking under the combined pressure of legal exclusion, social stigmatisation, and market regulation. Their membership has dropped from more than 80,000 in 2009 to fewer than 20,000 in 2025. Yet their disappearance is far from complete. Based on extensive fieldwork with active and former members, police officers, lawyers, and journalists, Martina Baradel examines how these organisations adapt to repression and explores what happens when a mafia begins to die. 21st Century Yakuza illuminates how Japan’s model of regulatory saturation has dismantled the Yakuza’s organisational capacity but left behind a governance vacuum in markets the state struggles to control. This book demonstrates how the Yakuza persist through symbolic and residual forms of authority even as their formal power erodes, and how their decline has fragmented the criminal underworld. It traces the transformation of the Yakuza from territorially embedded brokers of governance to marginal actors in a more decentralised criminal landscape, including the delegation of trading activities to non-affiliated networks. Through a sharp lens on criminal decline and adaptation, 21st Century Yakuza offers a compelling portrait of a fading underworld and the new forms of disorder emerging in its wake. It is an essential read for anyone interested in the shifting boundaries of law, authority, and illicit power in contemporary Japan.",
+        year: "2026",
+        image: "/images/bookcovers/21st-yakuza.png",
+        translations: ["EN"],
       },
       {
-        title: "Donne nell'Ombra",
-        desc: "Interviste e approfondimenti sociologici sulle donne emarginate.",
-        year: "Prossimamente",
-      },
-      {
-        title: "Il Crimine nel Giappone Moderno",
-        desc: "Uno sguardo globale ai cambiamenti strutturali del crimine.",
-        year: "2021",
+        title: "Yakuza Blues",
+        desc: "Japan is one of the safest countries in the world and, at the same time, the birthplace of a powerful, centuries-old, and far-reaching mafia. The life of the yakuza, the Japanese mafia, is deeply intertwined with that of Japan itself — the yakuza looks after citizens forgotten by the state, engages with politics, participates in economic life, and regulates the criminal underworld. For several years, Martina Baradel has made the yakuza the subject of her study and passionate research. Her work, grounded in the testimonies of those who live on the shadow side of Japan's meticulously ordered society, has earned her the trust of police officers and members of the organisation alike, as well as the very few Japanese journalists who cover the yakuza and who have little patience for the dominant narrative surrounding it. It is through a network of trusted contacts that she manages to secure the meeting from which this investigation takes its departure: a meeting with the boss of one of the largest yakuza families, Tanaka Jun'ichiro, a fictional name under which Martina Baradel gathers the voices and lives of very real people. Meeting after meeting, Tanaka will recount to Martina his life of triumphs and downfalls, and in doing so will allow her to reconstruct the history of the yakuza over the past seventy years, which is, at the same time, the history of Japan over the past seventy years.",
+        year: "2025",
+        image: "/images/bookcovers/cover-yakuza-blues.jpg",
+        translations: ["IT"],
       },
     ],
     papers: [
       {
-        title: "L'impatto economico della Yakuza",
-        journal: "Journal of Asian Sociology",
-        year: "2022",
-        link: "#",
+        title:
+          "Investigating the dynamics of yakuza violence using multilevel network analysis",
+        journal: "ScienceDirect",
+        year: "2025",
+        link: "https://www.sciencedirect.com/science/article/pii/S0378873325000103",
       },
       {
-        title: "I ruoli femminili nell'economia sotterranea",
-        journal: "Criminology Review",
+        title:
+          "Mapping drug smuggling networks in Japan: a social network analysis of trial documents",
+        journal: "Taylor & Francis",
+        year: "2024",
+        link: "https://www.tandfonline.com/doi/pdf/10.1080/17440572.2024.2375241",
+      },
+      {
+        title:
+          "Under a setting sun: the spatial displacement of the yakuza and their longing for visibility",
+        journal: "Springer",
         year: "2021",
-        link: "#",
+        link: "https://link.springer.com/article/10.1007/s12117-020-09398-4",
       },
       {
-        title: "Urbanizzazione e tassi di criminalità a Tokyo",
-        journal: "Urban Studies Quarterly",
-        year: "2019",
-        link: "#",
+        title:
+          "Yakuza Grey: The Shrinking of the Il/legal Nexus and its Repercussions on Japanese Organised Crime",
+        journal: "Taylor & Francis",
+        year: "2020",
+        link: "https://www.tandfonline.com/doi/abs/10.1080/17440572.2020.1813114",
+      },
+      {
+        title:
+          "The rise of shaming paternalism in Japan: recent tendencies in the Japanese criminal justice system",
+        journal: "Springer",
+        year: "2021",
+        link: "https://link.springer.com/article/10.1007/s12117-019-09357-8",
+      },
+      {
+        title:
+          "The Yakuza on Trial: Sentencing Patterns of Members of Japanese Organized Crime",
+        journal: "ZJapanR",
+        year: "2020",
+        link: "https://www.zjapanr.de/index.php/zjapanr/article/view/1538/1580",
+      },
+      {
+        title:
+          "Discrimination, Othering, and the Political Instrumentalizing of Pandemic Disease. Two Case Studies",
+        journal: "Openedition",
+        year: "2020",
+        link: "https://journals.openedition.org/jihi/1479",
       },
     ],
     articles: [
       {
-        title: "Intervista: Alla scoperta della Yakuza",
-        source: "The Japan Times",
-        year: "2023",
+        title:
+          "How the real murders behind the hit novel Butter exposed Japanese media misogyny",
+        source: "The Conversation",
+        year: "31/01/2025",
+        link: "https://theconversation.com/how-the-real-murders-behind-the-hit-novel-butter-exposed-japanese-media-misogyny-247859",
       },
       {
-        title: "Opinione: Il costo nascosto dell'emarginazione",
-        source: "The Guardian",
-        year: "2022",
+        title:
+          "‘I never lost a fight against a man’: the story of the only woman to join Japan’s notorious yakuza",
+        source: "The Conversation",
+        year: "16/01/2024",
+        link: "https://theconversation.com/i-never-lost-a-fight-against-a-man-the-story-of-the-only-woman-to-join-japans-notorious-yakuza-220792",
       },
-      { title: "Speciale: Donne nell'Ombra", source: "BBC News", year: "2024" },
+      {
+        title:
+          "Yakuza battle Chinese gangs for control of Japan’s criminal underworld",
+        source: "The Conversation",
+        year: "30/01/2023",
+        link: "https://theconversation.com/yakuza-battle-chinese-gangs-for-control-of-japans-criminal-underworld-197718",
+      },
+      {
+        title: "Crime in Japan is back to normal",
+        source: "East Asia Forum",
+        year: "08/03/2023",
+        link: "https://eastasiaforum.org/2023/03/08/crime-in-japan-is-back-to-normal/",
+      },
+    ],
+    news: [
+      {
+        title: "Yakuza Blues - Intervista a Martina Baradel",
+        source: "Orizzonti Internazionali",
+        year: "04/11/2025",
+        link: "https://www.orizzontinternazionali.org/2025/11/04/yakuza-blues-intervista-a-martina-baradel/",
+      },
+      {
+        title: "Cos'è davvero la yakuza",
+        source: "Japanica",
+        year: "11/05/2025",
+        link: "https://japanica.substack.com/p/cosa-davvero-la-yakuza-martina-baradel",
+      },
+      {
+        title: "I segreti della YAKUZA",
+        source: "Cose Molto Umane podcast",
+        year: "05/04/2025",
+        link: "https://www.youtube.com/watch?v=O8J_a83ptEE",
+      },
+      {
+        title:
+          "Inside the underbelly of East Asia: Japan’s ex-yakuza search for redemption",
+        source: "CNA",
+        year: "03/05/2024",
+        link: "https://www.youtube.com/watch?v=cZ-iKFsWzfw",
+      },
+      {
+        title:
+          "Yakuza: cuál es el origen de la temida mafia japonesa y cómo se ha transformado",
+        source: "BBC Mundo",
+        year: "28/04/2024",
+        link: "https://www.bbc.com/mundo/articles/cw59p11n1ywo",
+      },
+      {
+        title:
+          "'Desde pequena gostava de violência': a história de Nishimura Mako, única mulher a conseguir entrar para a Yakuza",
+        source: "BBC News Brasil",
+        year: "09/04/2024",
+        link: "https://www.bbc.com/portuguese/articles/cv2yj2dmwxyo",
+      },
+      {
+        title:
+          "Why Japan’s yakuza crime groups are on the verge of disappearing",
+        source: "About Asia",
+        year: "15/04/2024",
+        link: "https://www.scmp.com/podcasts/about-asia",
+      },
+      {
+        title:
+          "Feds charge suspected yakuza leader with selling nuclear weapon materials to Iran",
+        source: "Washington Post",
+        year: "22/02/2024",
+        link: "https://www.washingtontimes.com/news/2024/feb/22/feds-charge-suspected-yakuza-gang-leader-with-sell/",
+      },
+      {
+        title: "Yakuza",
+        source: "Altri Orienti",
+        year: "29/09/2023",
+        link: "https://www.youtube.com/watch?v=qJYXajejcaw",
+      },
     ],
   },
   jp: {
-    title: "出版物 | マルティナ・バラデル",
+    title: "出版物・メディア | マルティナ・バラデル",
     headingBooks: "著書",
     headingPapers: "論文",
-    headingArticles: "記事・メディア",
+    headingArticles: "記事",
+    headingNews: "メディア・ニュース",
+    labelTranslations: "翻訳版:",
     books: [
       {
-        title: "ヤクザと都市",
-        desc: "ヤクザ文化と都市環境の探求。",
-        year: "2023年",
-        image: "/images/bookcovers/cover-yakuza-blues.jpg"
+        title: "21st Century Yakuza: Death of Japanese Organised Crime",
+        desc: "Once dominant and institutionalised, the Yakuza, one of Japan’s best known criminal organisations, is now shrinking under the combined pressure of legal exclusion, social stigmatisation, and market regulation. Their membership has dropped from more than 80,000 in 2009 to fewer than 20,000 in 2025. Yet their disappearance is far from complete. Based on extensive fieldwork with active and former members, police officers, lawyers, and journalists, Martina Baradel examines how these organisations adapt to repression and explores what happens when a mafia begins to die. 21st Century Yakuza illuminates how Japan’s model of regulatory saturation has dismantled the Yakuza’s organisational capacity but left behind a governance vacuum in markets the state struggles to control. This book demonstrates how the Yakuza persist through symbolic and residual forms of authority even as their formal power erodes, and how their decline has fragmented the criminal underworld. It traces the transformation of the Yakuza from territorially embedded brokers of governance to marginal actors in a more decentralised criminal landscape, including the delegation of trading activities to non-affiliated networks. Through a sharp lens on criminal decline and adaptation, 21st Century Yakuza offers a compelling portrait of a fading underworld and the new forms of disorder emerging in its wake. It is an essential read for anyone interested in the shifting boundaries of law, authority, and illicit power in contemporary Japan.",
+        year: "2026",
+        image: "/images/bookcovers/21st-yakuza.png",
+        translations: ["EN"],
       },
       {
-        title: "日陰に生きる女性たち",
-        desc: "社会から疎外された女性たちのインタビューと社会学的考察。",
-        year: "出版予定",
-      },
-      {
-        title: "現代日本の犯罪",
-        desc: "構造的犯罪の変遷に関する包括的な考察。",
-        year: "2021年",
+        title: "Yakuza Blues",
+        desc: "Japan is one of the safest countries in the world and, at the same time, the birthplace of a powerful, centuries-old, and far-reaching mafia. The life of the yakuza, the Japanese mafia, is deeply intertwined with that of Japan itself — the yakuza looks after citizens forgotten by the state, engages with politics, participates in economic life, and regulates the criminal underworld. For several years, Martina Baradel has made the yakuza the subject of her study and passionate research. Her work, grounded in the testimonies of those who live on the shadow side of Japan's meticulously ordered society, has earned her the trust of police officers and members of the organisation alike, as well as the very few Japanese journalists who cover the yakuza and who have little patience for the dominant narrative surrounding it. It is through a network of trusted contacts that she manages to secure the meeting from which this investigation takes its departure: a meeting with the boss of one of the largest yakuza families, Tanaka Jun'ichiro, a fictional name under which Martina Baradel gathers the voices and lives of very real people. Meeting after meeting, Tanaka will recount to Martina his life of triumphs and downfalls, and in doing so will allow her to reconstruct the history of the yakuza over the past seventy years, which is, at the same time, the history of Japan over the past seventy years.",
+        year: "2025",
+        image: "/images/bookcovers/cover-yakuza-blues.jpg",
+        translations: ["IT"],
       },
     ],
     papers: [
       {
-        title: "ヤクザの経済的影響",
-        journal: "Journal of Asian Sociology",
-        year: "2022",
-        link: "#",
+        title:
+          "Investigating the dynamics of yakuza violence using multilevel network analysis",
+        journal: "ScienceDirect",
+        year: "2025",
+        link: "https://www.sciencedirect.com/science/article/pii/S0378873325000103",
       },
       {
-        title: "地下経済における女性の役割",
-        journal: "Criminology Review",
+        title:
+          "Mapping drug smuggling networks in Japan: a social network analysis of trial documents",
+        journal: "Taylor & Francis",
+        year: "2024",
+        link: "https://www.tandfonline.com/doi/pdf/10.1080/17440572.2024.2375241",
+      },
+      {
+        title:
+          "Under a setting sun: the spatial displacement of the yakuza and their longing for visibility",
+        journal: "Springer",
         year: "2021",
-        link: "#",
+        link: "https://link.springer.com/article/10.1007/s12117-020-09398-4",
       },
       {
-        title: "東京の都市化と犯罪率",
-        journal: "Urban Studies Quarterly",
-        year: "2019",
-        link: "#",
+        title:
+          "Yakuza Grey: The Shrinking of the Il/legal Nexus and its Repercussions on Japanese Organised Crime",
+        journal: "Taylor & Francis",
+        year: "2020",
+        link: "https://www.tandfonline.com/doi/abs/10.1080/17440572.2020.1813114",
+      },
+      {
+        title:
+          "The rise of shaming paternalism in Japan: recent tendencies in the Japanese criminal justice system",
+        journal: "Springer",
+        year: "2021",
+        link: "https://link.springer.com/article/10.1007/s12117-019-09357-8",
+      },
+      {
+        title:
+          "The Yakuza on Trial: Sentencing Patterns of Members of Japanese Organized Crime",
+        journal: "ZJapanR",
+        year: "2020",
+        link: "https://www.zjapanr.de/index.php/zjapanr/article/view/1538/1580",
+      },
+      {
+        title:
+          "Discrimination, Othering, and the Political Instrumentalizing of Pandemic Disease. Two Case Studies",
+        journal: "Openedition",
+        year: "2020",
+        link: "https://journals.openedition.org/jihi/1479",
       },
     ],
     articles: [
       {
-        title: "インタビュー: ヤクザを暴く",
-        source: "The Japan Times",
-        year: "2023",
+        title:
+          "How the real murders behind the hit novel Butter exposed Japanese media misogyny",
+        source: "The Conversation",
+        year: "31/01/2025",
+        link: "https://theconversation.com/how-the-real-murders-behind-the-hit-novel-butter-exposed-japanese-media-misogyny-247859",
       },
       {
-        title: "オピニオン: 疎外の隠されたコスト",
-        source: "The Guardian",
-        year: "2022",
+        title:
+          "‘I never lost a fight against a man’: the story of the only woman to join Japan’s notorious yakuza",
+        source: "The Conversation",
+        year: "16/01/2024",
+        link: "https://theconversation.com/i-never-lost-a-fight-against-a-man-the-story-of-the-only-woman-to-join-japans-notorious-yakuza-220792",
       },
-      { title: "特集: 日陰の女性たち", source: "BBC News", year: "2024" },
+      {
+        title:
+          "Yakuza battle Chinese gangs for control of Japan’s criminal underworld",
+        source: "The Conversation",
+        year: "30/01/2023",
+        link: "https://theconversation.com/yakuza-battle-chinese-gangs-for-control-of-japans-criminal-underworld-197718",
+      },
+      {
+        title: "Crime in Japan is back to normal",
+        source: "East Asia Forum",
+        year: "08/03/2023",
+        link: "https://eastasiaforum.org/2023/03/08/crime-in-japan-is-back-to-normal/",
+      },
+    ],
+    news: [
+      {
+        title: "Yakuza Blues - Intervista a Martina Baradel",
+        source: "Orizzonti Internazionali",
+        year: "04/11/2025",
+        link: "https://www.orizzontinternazionali.org/2025/11/04/yakuza-blues-intervista-a-martina-baradel/",
+      },
+      {
+        title: "Cos'è davvero la yakuza",
+        source: "Japanica",
+        year: "11/05/2025",
+        link: "https://japanica.substack.com/p/cosa-davvero-la-yakuza-martina-baradel",
+      },
+      {
+        title: "I segreti della YAKUZA",
+        source: "Cose Molto Umane podcast",
+        year: "05/04/2025",
+        link: "https://www.youtube.com/watch?v=O8J_a83ptEE",
+      },
+      {
+        title:
+          "Inside the underbelly of East Asia: Japan’s ex-yakuza search for redemption",
+        source: "CNA",
+        year: "03/05/2024",
+        link: "https://www.youtube.com/watch?v=cZ-iKFsWzfw",
+      },
+      {
+        title:
+          "Yakuza: cuál es el origen de la temida mafia japonesa y cómo se ha transformado",
+        source: "BBC Mundo",
+        year: "28/04/2024",
+        link: "https://www.bbc.com/mundo/articles/cw59p11n1ywo",
+      },
+      {
+        title:
+          "'Desde pequena gostava de violência': a história de Nishimura Mako, única mulher a conseguir entrar para a Yakuza",
+        source: "BBC News Brasil",
+        year: "09/04/2024",
+        link: "https://www.bbc.com/portuguese/articles/cv2yj2dmwxyo",
+      },
+      {
+        title:
+          "Why Japan’s yakuza crime groups are on the verge of disappearing",
+        source: "About Asia",
+        year: "15/04/2024",
+        link: "https://www.scmp.com/podcasts/about-asia",
+      },
+      {
+        title:
+          "Feds charge suspected yakuza leader with selling nuclear weapon materials to Iran",
+        source: "Washington Post",
+        year: "22/02/2024",
+        link: "https://www.washingtontimes.com/news/2024/feb/22/feds-charge-suspected-yakuza-gang-leader-with-sell/",
+      },
+      {
+        title: "Yakuza",
+        source: "Altri Orienti",
+        year: "29/09/2023",
+        link: "https://www.youtube.com/watch?v=qJYXajejcaw",
+      },
     ],
   },
 };
@@ -213,6 +533,16 @@ const cur = content[lang as keyof typeof content];
                   <span class="year">{book.year}</span>
                   <h3 class="text-accent">{book.title}</h3>
                   <p>{book.desc}</p>
+                  {book.translations && (
+                    <div class="book-translations">
+                      <span class="trans-label">{cur.labelTranslations}</span>
+                      <div class="trans-tags">
+                        {book.translations.map((t) => (
+                          <span class="trans-tag">{t}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))
@@ -234,7 +564,12 @@ const cur = content[lang as keyof typeof content];
           cur.papers.map((paper) => (
             <div class="list-item">
               <h3 class="item-title">
-                <a href={paper.link} class="text-accent hover-gold">
+                <a
+                  href={paper.link}
+                  class="text-accent hover-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {paper.title}
                 </a>
               </h3>
@@ -258,10 +593,60 @@ const cur = content[lang as keyof typeof content];
         {
           cur.articles.map((article) => (
             <div class="list-item article-item">
-              <h3 class="item-title">{article.title}</h3>
+              <h3 class="item-title">
+                {article.link ? (
+                  <a
+                    href={article.link}
+                    class="text-accent hover-gold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {article.title}
+                  </a>
+                ) : (
+                  article.title
+                )}
+              </h3>
               <div class="item-meta">
                 <span class="source">{article.source}</span> &bull;{" "}
                 <span>{article.year}</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="section-divider" />
+
+    <!-- News Section -->
+    <section class="content-section">
+      <h2 class="section-title">{cur.headingNews}</h2>
+      <div class="list-container">
+        {
+          cur.news.map((item) => (
+            <div
+              class="list-item article-item"
+              style="border-left: 4px solid var(--color-header-bg);"
+            >
+              <h3 class="item-title">
+                {item.link ? (
+                  <a
+                    href={item.link}
+                    class="text-accent hover-gold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.title}
+                  </a>
+                ) : (
+                  item.title
+                )}
+              </h3>
+              <div class="item-meta">
+                <span class="source">{item.source}</span> &bull;{" "}
+                <span>{item.year}</span>
               </div>
             </div>
           ))
@@ -281,7 +666,20 @@ const cur = content[lang as keyof typeof content];
       btn.addEventListener("click", (e) => {
         const carousel = (e.target as HTMLElement)
           .previousElementSibling as HTMLElement;
-        if (carousel) carousel.scrollBy({ left: carousel.clientWidth, behavior: "smooth" });
+        if (carousel) {
+          // 마지막에 도달했을 때 맨 처음으로 이동
+          if (
+            carousel.scrollLeft + carousel.clientWidth >=
+            carousel.scrollWidth - 10
+          ) {
+            carousel.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            carousel.scrollBy({
+              left: carousel.clientWidth,
+              behavior: "smooth",
+            });
+          }
+        }
       });
     });
 
@@ -289,7 +687,20 @@ const cur = content[lang as keyof typeof content];
       btn.addEventListener("click", (e) => {
         const carousel = (e.target as HTMLElement)
           .nextElementSibling as HTMLElement;
-        if (carousel) carousel.scrollBy({ left: -carousel.clientWidth, behavior: "smooth" });
+        if (carousel) {
+          // 맨 처음에 있을 때 마지막으로 이동
+          if (carousel.scrollLeft <= 10) {
+            carousel.scrollTo({
+              left: carousel.scrollWidth,
+              behavior: "smooth",
+            });
+          } else {
+            carousel.scrollBy({
+              left: -carousel.clientWidth,
+              behavior: "smooth",
+            });
+          }
+        }
       });
     });
   };
@@ -358,35 +769,30 @@ const cur = content[lang as keyof typeof content];
     flex: 0 0 100%;
     scroll-snap-align: center;
     background: #ffffff;
-    border: 1px solid var(--color-border);
+    border: 3px solid var(--color-border);
+    border-radius: 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4rem;
-    padding: 3rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .book-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    gap: 2.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   }
 
   .book-cover {
     flex: 0 0 350px;
     height: 500px;
-    background-color: var(--color-header-bg);
+    background-color: #ffffff;
     position: relative;
     border-bottom: 4px solid var(--color-accent);
-    box-shadow: -10px 10px 20px rgba(0,0,0,0.1);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
 
   .book-cover img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
   }
 
@@ -400,21 +806,72 @@ const cur = content[lang as keyof typeof content];
     color: var(--color-accent);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 
   .book-info h3 {
-    margin: 1rem 0 1.5rem;
-    font-size: 2.8rem;
+    margin: 0.5rem 0 0.75rem;
+    font-size: 2.4rem;
     font-family: var(--font-serif);
     line-height: 1.1;
     color: var(--color-text);
   }
 
   .book-info p {
-    font-size: 1.25rem;
+    font-size: 1.05rem; /* Reduced from 1.25rem */
     color: var(--color-text-muted);
     line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-height: 15rem;
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(212, 175, 55, 0.5) transparent;
+  }
+
+  .book-info p::-webkit-scrollbar {
+    width: 6px;
+  }
+  .book-info p::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .book-info p::-webkit-scrollbar-thumb {
+    background-color: rgba(212, 175, 55, 0.4);
+    border-radius: 4px;
+  }
+  .book-info p::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-accent);
+  }
+
+  .book-translations {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 1rem;
+  }
+
+  .trans-label {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .trans-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .trans-tag {
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    background: #fdfbf7;
+    border: 1px solid rgba(184, 148, 42, 0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 500;
   }
 
   .carousel-btn {
@@ -432,7 +889,7 @@ const cur = content[lang as keyof typeof content];
     cursor: pointer;
     transition: all 0.2s ease;
     flex-shrink: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     margin-top: -1rem; /* 하단 스크롤바 영역(1rem)으로 인해 중앙이 빗나가는 현상 보정 */
     padding-bottom: 3px; /* 폰트 특성상 화살표 기호가 미세하게 쳐지는 현상 시각적 중앙 보정 */
   }
@@ -503,18 +960,18 @@ const cur = content[lang as keyof typeof content];
       flex: 0 0 100%;
       flex-direction: column;
       padding: 1.5rem;
-      gap: 1.5rem;
+      gap: 1rem;
       text-align: center;
     }
 
     .book-cover {
       flex: 0 0 auto;
       width: 100%;
-      height: 350px;
+      height: 420px;
     }
 
     .book-info h3 {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 </style>

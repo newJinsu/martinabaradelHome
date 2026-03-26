@@ -13,22 +13,34 @@ const { lang } = Astro.params;
 
 const content = {
   en: {
-    title: "Martina Baradel | Sociologist & Criminologist",
-    subtitle: "PhD in Sociology and Criminology",
-    bio: "Educated in the UK, specializing in Yakuza culture and marginalized women.",
-    welcome: "Welcome to my academic portfolio and writing space."
+    title: "Martina Baradel | Criminologist & Japanese Studies Scholar",
+    subtitle: "Associate Professor, Nagoya University & Associate Member, University of Oxford",
+    bio: [
+      "I am Associate Professor at the Graduate School of Law, Nagoya University, and Associate Member of the Department of Sociology, University of Oxford.",
+      "My research sits at the intersection of criminology and Japanese studies, specialising in the yakuza, Japanese organised crime, and their transformation in contemporary Japan. I draw on ethnographic fieldwork and comparative sociological approaches, and my work has appeared in leading academic journals.",
+      "I am the author of 21st Century Yakuza: Death of Japanese Organised Crime (OUP, 2026) and Yakuza Blues (Rizzoli, 2025). I previously held a Marie Skłodowska-Curie Global Fellowship at the University of Oxford."
+    ],
+    welcome: "Criminologist & Japanese Studies Scholar"
   },
   it: {
-    title: "Martina Baradel | Sociologa e Criminologa",
-    subtitle: "Dottorato in Sociologia e Criminologia",
-    bio: "Studi nel Regno Unito, specializzata in cultura Yakuza e donne emarginate.",
-    welcome: "Benvenuti nel mio portfolio accademico e spazio di scrittura."
+    title: "Martina Baradel | Criminologa e Studiosa di Studi Giapponesi",
+    subtitle: "Professoressa Associata, Nagoya University & Membro Associato, University of Oxford",
+    bio: [
+      "Sono Professoressa Associata presso la Graduate School of Law, Nagoya University, e Membro Associato del Dipartimento di Sociologia, University of Oxford.",
+      "La mia ricerca si colloca all'intersezione tra criminologia e studi giapponesi, specializzandomi nella yakuza, nella criminalità organizzata giapponese e nella loro trasformazione nel Giappone contemporaneo. Mi baso su ricerche etnografiche e approcci sociologici comparativi, e i miei lavori sono stati pubblicati su importanti riviste accademiche.",
+      "Sono autrice di 21st Century Yakuza: Death of Japanese Organised Crime (OUP, 2026) e Yakuza Blues (Rizzoli, 2025). In precedenza ho beneficiato di una Marie Skłodowska-Curie Global Fellowship presso l'Università di Oxford."
+    ],
+    welcome: "Criminologa e Studiosa di Studi Giapponesi"
   },
   jp: {
-    title: "マルティナ・バラデル | 社会学者・犯罪学者",
-    subtitle: "社会学・犯罪学博士",
-    bio: "英国で学び、ヤクザ文化や日陰に生きる女性を研究。",
-    welcome: "私の学術ポートフォリオと執筆スペースへようこそ。"
+    title: "マルティナ・バラデル | 犯罪学者・日本研究者",
+    subtitle: "名古屋大学大学院法学研究科 准教授 / オックスフォード大学社会学部 アソシエイト・メンバー",
+    bio: [
+      "名古屋大学大学院法学研究科で准教授を務め、オックスフォード大学社会学部のアソシエイト・メンバーでもあります。",
+      "私の研究は、犯罪学と日本研究の交差点に位置し、ヤクザ、日本の組織犯罪、そして現代日本におけるそれらの変容を専門としています。民族誌的フィールドワークと社会学の比較アプローチを活用し、主要な学術誌に論文を発表してきました。",
+      "著書に『21st Century Yakuza: Death of Japanese Organised Crime』（OUP、2026年）および『Yakuza Blues』（Rizzoli、2025年）があります。以前はオックスフォード大学でマリー・スクウォドフスカ＝キュリー・グローバル・フェローシップを獲得していました。"
+    ],
+    welcome: "犯罪学者・日本研究者"
   }
 };
 
@@ -40,8 +52,8 @@ const currentContent = content[lang as keyof typeof content];
     <div class="hero-content">
       <div class="hero-text">
         <h1 class="text-accent">{currentContent.welcome}</h1>
-        <h2>{currentContent.subtitle}</h2>
-        <p>{currentContent.bio}</p>
+        <h2 style="margin-bottom: 2rem;">{currentContent.subtitle}</h2>
+        {currentContent.bio.map((paragraph) => <p style="margin-top: 1rem;">{paragraph}</p>)}
       </div>
       <div class="hero-photo">
         <div class="photo-placeholder">
@@ -103,7 +115,7 @@ const currentContent = content[lang as keyof typeof content];
     display: none;
     color: var(--color-accent);
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -111,20 +123,20 @@ const currentContent = content[lang as keyof typeof content];
   }
   
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
   }
   
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     color: var(--color-text-muted);
     font-family: var(--font-sans);
     font-weight: 400;
   }
   
   .hero p {
-    font-size: 1.2rem;
+    font-size: 1.08rem;
     margin-top: 1.5rem;
   }
 
